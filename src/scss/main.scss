@@ -1891,4 +1891,311 @@
     }
   }
 }
+
+//.template22 ====================================================================================================
+.template22 {
+  // .template22__container
+  &__container {
+  }
+
+  // .template22__heading
+  &__heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(20) rem(32);
+
+    @media (max-width: $mobileSmall) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  // .template22__title
+  &__title {
+  }
+
+  // .template22__text
+  &__text {
+    max-width: rem(910);
+
+    p {
+      @include adaptiveValue("font-size", 18, 14);
+    }
+
+    ul {
+      @include adaptiveValue("margin-left", 80, 16);
+      display: grid;
+      align-content: flex-start;
+      row-gap: rem(20);
+
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+}
+
+//.template23 ====================================================================================================
+.template23 {
+  // .template23__container
+  &__container {
+  }
+
+  // .template23__heading
+  &__heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(20) rem(32);
+
+    @media (max-width: $mobileSmall) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  // .template23__title
+  &__title {
+  }
+
+  // .template23__row
+  &__row {
+    max-width: rem(1160);
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    @include adaptiveValue("column-gap", 180, 40, 1440, 992, 1);
+    align-content: flex-start;
+    gap: rem(64);
+
+    @media (min-width: $mobile) {
+      grid-template-columns: 1fr rem(430);
+    }
+  }
+
+  // .template23__contacts
+  &__contacts {
+    align-content: flex-start;
+    @include adaptiveValue("margin-top", -30, -8);
+    @include adaptiveValue("margin-bottom", -30, -8);
+    @include adaptiveValue("margin-left", -40, -8, 1440, 992, 1);
+    @include adaptiveValue("margin-right", -40, -8, 1440, 992, 1);
+
+    & > * {
+      @include adaptiveValue("padding-top", 30, 8);
+      @include adaptiveValue("padding-bottom", 30, 8);
+      @include adaptiveValue("padding-left", 40, 8, 1440, 992, 1);
+      @include adaptiveValue("padding-right", 40, 8, 1440, 992, 1);
+    }
+  }
+
+  // .template23__form
+  &__form {
+    max-width: rem(430);
+
+    .form__label {
+      font-weight: 700;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  // .template23__caption
+  &__caption {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 40, 24);
+    }
+  }
+}
+
+.contacts {
+  // .contacts__caption
+  &__caption {
+  }
+
+  // .contacts__item
+  &__item {
+    display: grid;
+    align-content: flex-start;
+    row-gap: rem(15);
+  }
+
+  // .contacts__link
+  &__link {
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: math.div(24, 18);
+
+    // .contacts__link_phone
+    &_phone {
+    }
+
+    // .contacts__link_email
+    &_email {
+      a {
+        display: inline-block;
+        color: #192ee7;
+        text-decoration: underline from-font;
+        text-underline-offset: 3px;
+        transition: $transition ease text-decoration 0s;
+
+        @media (any-hover: hover) {
+          &:hover {
+            text-decoration: transparent from-font;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contacts__link a {
+  text-decoration: underline transparent from-font;
+  text-underline-offset: 3px;
+  transition: $transition ease text-decoration 0s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      text-decoration: underline from-font;
+    }
+  }
+}
+
+//.template23 ====================================================================================================
+.template24 {
+  // .template24__container
+  &__container {
+    @media (max-width: $mobileM) {
+      padding: 0;
+    }
+  }
+
+  // .template24__map
+  &__map {
+    position: relative;
+    padding-bottom: 100%;
+
+    @media (min-width: $mobileM) {
+      padding-bottom: percent(757, 1326);
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.case-list {
+  .site-breadcrumbs {
+    margin-bottom: rem(22);
+  }
+
+  // .case-list__big-container
+  &__big-container {
+  }
+
+  // .case-list__wrapper
+  &__wrapper {
+    position: relative;
+    @include adaptiveValue("padding-top", 45, 30);
+    @include adaptiveValue("padding-left", 98, 20, 1640, 992, 1);
+    @include adaptiveValue("padding-right", 98, 20, 1640, 992, 1);
+    @include adaptiveValue("padding-bottom", 45, 30);
+  }
+
+  // .case-list__items
+  &__items {
+    position: relative;
+    z-index: 1;
+  }
+
+  // .case-list__item
+  &__item {
+    box-shadow: none;
+
+    &:not(:last-child) {
+      @include adaptiveValue("padding-bottom", 80, 40);
+      @include adaptiveValue("margin-bottom", 80, 40);
+      border-bottom: rem(1) solid #e6e6e6;
+    }
+  }
+
+  // .case-list__pagination
+  &__pagination {
+    position: relative;
+    z-index: 1;
+
+    &:not(:first-child) {
+      @include adaptiveValue("margin-top", 64, 32);
+    }
+  }
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(6);
+
+  .page-prev {
+    transform: rotate(180deg);
+  }
+
+  .page-numbers {
+    padding: rem(8) rem(10);
+    border-radius: rem(10);
+    font-size: rem(18);
+    line-height: math.div(24, 18);
+    color: #afacaf;
+
+    &.current {
+      background-color: #eeff29;
+      color: $mainColor;
+    }
+  }
+
+  a.page-numbers {
+    @media (any-hover: hover) {
+      transition: $transition ease color 0s;
+
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+}
+
+//.blog-list ====================================================================================================
+.blog-list {
+  // .blog-list__container
+  &__container {
+  }
+
+  // .blog-list__heading
+  &__heading {
+  }
+
+  // .blog-list__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include adaptiveValue("column-gap", 200, 16, 1440, 768, 1);
+    @include adaptiveValue("row-gap", 60, 24);
+
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  // .blog-list__pagination
+  &__pagination {
+    &:not(:first-child) {
+      @include adaptiveValue("margin-top", 60, 32);
+    }
+  }
+}
 //====================================================================================================

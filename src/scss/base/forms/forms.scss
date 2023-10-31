@@ -28,6 +28,28 @@
 	&__input {
 	}
 
+	// .form__privacy
+	&__privacy {
+		&:not(:first-child) {
+			margin-top: rem(10);
+		}
+
+		.checkbox {
+			// .checkbox__input
+			&__input {
+			}
+
+			// .checkbox__label
+			&__label {
+			}
+
+			// .checkbox__text
+			&__text {
+				font-size: rem(12);
+			}
+		}
+	}
+
 	// .form__range
 	&__range {
 	}
@@ -52,7 +74,7 @@ label.form__label {
 
 // <CHECK>
 // Снипет (HTML): chk
-// @import "checkbox";
+@import "checkbox";
 
 // <RADIO>
 // Снипет (HTML): opt

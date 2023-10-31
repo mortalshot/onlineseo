@@ -1,8 +1,10 @@
 .checkbox {
 	position: relative;
+
 	&:not(:last-child) {
 		margin-bottom: em(5);
 	}
+
 	// .checkbox__input
 	&__input {
 		position: absolute;
@@ -16,6 +18,7 @@
 			background: #000;
 		}
 	}
+
 	// .checkbox__label
 	&__label {
 		cursor: pointer;
@@ -23,15 +26,29 @@
 		align-items: center;
 		position: relative;
 		gap: 10px;
+
 		&:before {
 			content: "";
 			align-self: flex-start;
-			flex: 0 0 20px;
-			width: 20px;
-			height: 20px;
-			border: 1px solid #a7a9ac;
+			flex: 0 0 16px;
+			width: 16px;
+			height: 16px;
+			border: 1px solid #000;
+			border-radius: rem(3);
+		}
+		&::after {
+			content: '';
+			display: block;
+			width: rem(11);
+			height: rem(11);
+			flex: 0 0 rem(11);
+			background: url(../img/icons/check-black.svg) no-repeat center/contain;
+			position: absolute;
+			left: rem(2);
+			top: rem(2);
 		}
 	}
+
 	// .checkbox__text
 	&__text {
 	}
